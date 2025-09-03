@@ -1,6 +1,7 @@
 class Dados:
     def __init__(self):
         self.vendas=[('Teclado',50,2),('Mouse',25.50,4),('Monitor',300,1),('Fone',45,1),('Webcam',75.20,2)]
+        self.verificar()
     def verificar(self):
         self.nova_lista=list()
         produtos_unicos=set()
@@ -21,4 +22,3 @@ class Dados:
     
 
 a=Dados()
-a.verificar()
