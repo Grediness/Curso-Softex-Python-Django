@@ -12,15 +12,16 @@ class Analise:
             else:
                 cont_consoantes+=1
         print(f'A frase {self.frase} contém:\n CONSOANTES: {cont_consoantes}\n VOGAIS: {cont_vogais}')
-    def contar_espacos(self):
+
+    def contar_palavras(self):
         frase_sem_espacos=self.frase.lower().strip()
         espacos=0
         for i in frase_sem_espacos:
             if i in ' ':
                 espacos+=1
-        if espacos>1:
+        if espacos>=1:
             espacos+=1
-        print(f'Sua palavra contém {espacos} espaços')
+        print(f'Sua frases contém {espacos} palavras')
 
     def verificar(self):
         frase_sem_espacos=self.frase.lower().replace(' ','')
@@ -36,7 +37,7 @@ class Analise:
 
 frase=input('Digite uma frase: ')
 analise_de_frase=Analise(frase)
-analise_de_frase.contar_espacos()
+analise_de_frase.contar_palavras()
 analise_de_frase.contar_letras()
 analise_de_frase.verificar()
 
